@@ -81,11 +81,20 @@
     To commission your Barkcloth Logo
     <button id="showForm" class="cta">Tap Here</button>
   </div>
-  <form id="commissionForm" action="https://formspree.io/f/mqebgeln" method="POST">
-    <div class="form-upload">
-      <label for="logo">Upload Logo (PDF, SVG, PNG)</label>
-      <label for="logoLink">Logo file link (Google Drive / Dropbox / WeTransfer)</label>
+  <label for="logoLink">Logo file link</label>
+<input
+  type="url"
+  id="logoLink"
+  name="logo_link"
+  placeholder="Paste a secure link to your logo file"
+  required
+/>
+<p style="font-size:0.85rem; margin-top:-6px; color:#6b4a2f;">
+  Please ensure the link is viewable (no access request)
+</p>
+
 <input type="hidden" name="_subject" value="Logo in Lubugo — New Commission Request">
+
     </div>
     <label>Company / Organisation</label>
     <input type="text" name="company" placeholder="Company / organisation" required />
@@ -153,5 +162,6 @@
 
 </body>
 </html>
+
 
 
