@@ -5,6 +5,36 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Logo in Lubugo | Your logo, rendered in authentic Ugandan barkcloth</title>
   <style>
+    /* Boardroom-optimised form spacing */
+form label {
+  margin-top: 18px;
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+form input,
+form select,
+form textarea {
+  margin-bottom: 18px;
+}
+
+form textarea {
+  line-height: 1.6;
+}
+
+form p {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+/* Tighten helper text under logo link */
+
+form p.helper {
+  margin-top: -8px;
+  margin-bottom: 18px;
+  font-size: 0.85rem;
+  color: #6b4a2f;
+}
     body { margin:0; font-family: Georgia, "Times New Roman", serif; color:#2b1d12; background:#f6f1ea; line-height:1.55; font-size:16px; }
     header { background:#8B5E3C url('lubugo-barkcloth.jpg') center/cover no-repeat; color:#fff; padding:64px 20px; text-align:center; }
     header h1 { font-family:"Palatino Linotype", Palatino, Georgia, serif; font-size:3.2rem; margin-bottom:8px; letter-spacing:1.2px; margin-bottom:10px; letter-spacing:1.4px; }
@@ -89,7 +119,7 @@
   placeholder="Paste a secure link to your logo file"
   required
 />
-<p style="font-size:0.85rem; margin-top:-6px; color:#6b4a2f;">
+<p class="helper">
   Please ensure the link is viewable (no access request)
 </p>
 
@@ -142,26 +172,33 @@
 </footer>
 
 <script>
-  const toggleBtn = document.querySelector('.disclaimer-toggle');
-  const disclaimer = document.getElementById('disclaimer');
-  toggleBtn.addEventListener('click', () => {
-    disclaimer.style.display = (disclaimer.style.display === 'block') ? 'none' : 'block';
-  });
-
-  const showFormBtn = document.getElementById('showForm');
+  const toggleBtn = document.getElementById('showForm');
   const commissionForm = document.getElementById('commissionForm');
-  showFormBtn.addEventListener('click', () => {
-    if (commissionForm.style.display === 'grid') {
+
+  toggleBtn.addEventListener('click', () => {
+    const isVisible = commissionForm.style.display === 'grid';
+
+    if (isVisible) {
       commissionForm.style.display = 'none';
+      toggleBtn.textContent = 'Request a Commission';
     } else {
       commissionForm.style.display = 'grid';
-      showFormBtn.style.display = 'none';
+      toggleBtn.textContent = 'Hide Form';
     }
+  });
+
+  const disclaimerToggle = document.querySelector('.disclaimer-toggle');
+  const disclaimer = document.getElementById('disclaimer');
+
+  disclaimerToggle.addEventListener('click', () => {
+    disclaimer.style.display =
+      disclaimer.style.display === 'block' ? 'none' : 'block';
   });
 </script>
 
 </body>
 </html>
+
 
 
 
