@@ -81,7 +81,14 @@ form p.helper {
       form { padding:18px; }
       footer p { margin:6px 0; }
     }
+/* Commission form toggle control */
+#commissionForm.is-hidden {
+  display: none;
+}
 
+#commissionForm.is-visible {
+  display: grid;
+}
   </style>
 </head>
 <body>
@@ -111,6 +118,7 @@ form p.helper {
     To commission your Barkcloth Logo
     <button id="showForm" class="cta">Tap Here</button>
   </div>
+  <form id="commissionForm" class="is-hidden" action="https://formspree.io/f/mqebgeln" method="POST">
   <label for="logoLink">Logo file link</label>
 <input
   type="url"
@@ -176,14 +184,16 @@ form p.helper {
   const commissionForm = document.getElementById('commissionForm');
 
   toggleBtn.addEventListener('click', () => {
-    const isVisible = commissionForm.style.display === 'grid';
+    const isHidden = commissionForm.classList.contains('is-hidden');
 
-    if (isVisible) {
-      commissionForm.style.display = 'none';
-      toggleBtn.textContent = 'Request a Commission';
-    } else {
-      commissionForm.style.display = 'grid';
+    if (isHidden) {
+      commissionForm.classList.remove('is-hidden');
+      commissionForm.classList.add('is-visible');
       toggleBtn.textContent = 'Hide Form';
+    } else {
+      commissionForm.classList.add('is-hidden');
+      commissionForm.classList.remove('is-visible');
+      toggleBtn.textContent = 'Request a Commission';
     }
   });
 
@@ -198,6 +208,7 @@ form p.helper {
 
 </body>
 </html>
+
 
 
 
