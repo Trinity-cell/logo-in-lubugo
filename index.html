@@ -5,90 +5,220 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Logo in Lubugo | Your logo, rendered in authentic Ugandan barkcloth</title>
   <style>
-    /* Boardroom-optimised form spacing */
-form label {
-  margin-top: 18px;
-  margin-bottom: 6px;
-  font-weight: bold;
-}
+    body {
+      margin:0;
+      font-family: Georgia, "Times New Roman", serif;
+      color:#2b1d12;
+      background:#f6f1ea;
+      line-height:1.65;
+      font-size:16.5px;
+    }
 
-form input,
-form select,
-form textarea {
-  margin-bottom: 18px;
-}
+    header {
+      background:#8B5E3C url('lubugo-barkcloth.jpg') center/cover no-repeat;
+      color:#fff;
+      padding:80px 20px;
+      text-align:center;
+    }
+    header h1 {
+      font-family:"Palatino Linotype", Palatino, Georgia, serif;
+      font-size:3.6rem;
+      margin-bottom:12px;
+      letter-spacing:1.6px;
+    }
+    header em {
+      font-size:1.25rem;
+      opacity:0.95;
+      display:block;
+      margin-top:6px;
+    }
+    header p {
+      font-size:1.15rem;
+      max-width:800px;
+      margin:24px auto 0;
+      line-height:1.6;
+    }
 
-form textarea {
-  line-height: 1.6;
-}
+    .cta {
+      border:none;
+      outline:none;
+      background:#b16b28;
+      color:#fff;
+      padding:16px 32px;
+      text-decoration:none;
+      border-radius:6px;
+      font-weight:bold;
+      font-size:1.05rem;
+      transition:background 0.3s, transform 0.2s;
+      cursor:pointer;
+      box-shadow:0 2px 6px rgba(0,0,0,0.12);
+    }
+    .cta:hover {
+      background:#9c5a21;
+      transform:translateY(-2px);
+    }
 
-form p {
-  margin-top: 10px;
-  margin-bottom: 20px;
-}
+    section {
+      padding:60px 20px;
+      max-width:1100px;
+      margin:auto;
+    }
+    h2 {
+      font-family:"Palatino Linotype", Palatino, Georgia, serif;
+      font-size:2.2rem;
+      margin-bottom:28px;
+      text-align:center;
+      letter-spacing:0.8px;
+      color:#9c6b3f;
+      font-weight:bold;
+    }
 
-/* Tighten helper text under logo link */
+    /* Updated process grid: fixed 4 columns, boardroom style */
+    .process {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 28px;
+      justify-items: stretch;
+    }
+    .process .card {
+      font-family: Georgia, "Times New Roman", serif;
+      background:#fff;
+      padding:24px;
+      border-radius:8px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.1);
+      transition:transform 0.3s, box-shadow 0.3s;
+      line-height:1.6;
+      font-size:1.05rem;
+    }
+    .process .card:hover {
+      transform:translateY(-3px);
+      box-shadow:0 6px 18px rgba(0,0,0,0.15);
+    }
 
-form p.helper {
-  margin-top: -8px;
-  margin-bottom: 18px;
-  font-size: 0.85rem;
-  color: #6b4a2f;
-}
-    body { margin:0; font-family: Georgia, "Times New Roman", serif; color:#2b1d12; background:#f6f1ea; line-height:1.55; font-size:16px; }
-    header { background:#8B5E3C url('lubugo-barkcloth.jpg') center/cover no-repeat; color:#fff; padding:64px 20px; text-align:center; }
-    header h1 { font-family:"Palatino Linotype", Palatino, Georgia, serif; font-size:3.2rem; margin-bottom:8px; letter-spacing:1.2px; margin-bottom:10px; letter-spacing:1.4px; }
-    header p { font-size:1.1rem; max-width:750px; margin:0 auto 20px; }
-    .cta { border:none; outline:none; background:#c47a2c; color:#fff; padding:14px 28px; text-decoration:none; border-radius:6px; font-weight:bold; font-size:1rem; transition:background 0.3s; cursor:pointer; }
-    .cta:hover { background:#b16b28; }
-    section { padding:44px 20px; max-width:1000px; margin:auto; }
-    h2 { font-family:"Palatino Linotype", Palatino, Georgia, serif; font-size:2rem; margin-bottom:20px; text-align:center; letter-spacing:0.6px; color:#9c6b3f; font-weight:bold; }
-    .process { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
-    .process .card { font-family: Georgia, "Times New Roman", serif; background:#fff; padding:18px; border-radius:6px; box-shadow:0 2px 6px rgba(0,0,0,0.08); transition:transform 0.3s, box-shadow 0.3s; border-radius:6px; box-shadow:0 2px 6px rgba(0,0,0,0.08); transition:transform 0.3s, box-shadow 0.3s; }
-    .process .card:hover { transform:translateY(-3px); box-shadow:0 4px 12px rgba(0,0,0,0.12); }
-    form { background:#fff; padding:18px 24px 24px 24px; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.08); display:grid; grid-gap:14px; margin-top:16px; display:none; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.08); display:grid; grid-gap:15px; margin-top:20px; display:none; }
-    label { display:block; margin-top:0; font-weight:bold; }
-    input, select, textarea { width:100%; padding:10px; border:1px solid #ccc; border-radius:6px; font-size:1rem; font-family: Georgia, "Times New Roman", serif; }
-    textarea { min-height:120px; resize:vertical; font-family: Georgia, "Times New Roman", serif; }
-    footer { background:#2b1d12; color:#eee; padding:24px 20px; text-align:center; font-size:0.9rem; line-height:1.4; position:relative; text-align:center; font-size:0.9rem; line-height:1.4; position:relative; }
-    #commission-header { font-family:"Palatino Linotype", Palatino, Georgia, serif; font-size:2rem; font-weight:bold; color:#9c6b3f; margin-bottom:20px; text-align:center; display:flex; justify-content:center; align-items:center; gap:18px; letter-spacing:0.6px; }
-    .form-upload { display:flex; align-items:center; gap:15px; margin-bottom:15px; }
-    .form-upload input[type='file'] { flex:1; }
-    .disclaimer { background:#fff4e6; padding:15px; border-radius:6px; margin-top:20px; display:none; font-size:0.85rem; text-align:left; color:#2b1d12; }
-    .disclaimer-toggle { background:#eee; padding:6px 10px; border:1px solid #c47a2c; border-radius:6px; text-align:center; cursor:pointer; display:inline-block; font-weight:bold; margin-top:10px; color:#2b1d12; }
-    #gallery { padding:44px 20px; max-width:1000px; margin:auto; text-align:center; }
-  
-    /* Responsive refinements */
+    form#commissionForm {
+      background:#fff;
+      padding:24px 28px 28px 28px;
+      border-radius:10px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.08);
+      display:none;
+      grid-gap:16px;
+    }
+    form#commissionForm label {
+      margin-bottom:8px;
+      font-weight:bold;
+      display:block;
+      font-size:1.05rem;
+    }
+    form#commissionForm input,
+    form#commissionForm select,
+    form#commissionForm textarea {
+      width:100%;
+      padding:12px;
+      border:1px solid #ccc;
+      border-radius:6px;
+      font-size:1rem;
+      font-family: Georgia, "Times New Roman", serif;
+      margin-bottom:20px;
+    }
+    form#commissionForm textarea { min-height:140px; resize:vertical; }
+
+    #commission-header {
+      font-family:"Palatino Linotype", Palatino, Georgia, serif;
+      font-size:2rem;
+      font-weight:bold;
+      color:#9c6b3f;
+      margin-bottom:28px;
+      text-align:center;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      gap:20px;
+      letter-spacing:0.7px;
+      flex-wrap:wrap;
+    }
+
+    .disclaimer {
+      display: none;
+      background:#fff;
+      border:1px solid #c47a2c;
+      padding:18px;
+      border-radius:8px;
+      margin-top:12px;
+      font-size:0.9rem;
+      text-align:left;
+      color:#000;
+      line-height:1.6;
+    }
+    .disclaimer-toggle {
+      background:#fff;
+      padding:8px 14px;
+      border:1px solid #c47a2c;
+      border-radius:6px;
+      text-align:center;
+      cursor:pointer;
+      display:inline-block;
+      font-weight:bold;
+      margin-top:12px;
+      color:#000;
+    }
+
+    #gallery {
+      padding:60px 20px;
+      max-width:1000px;
+      margin:auto;
+      text-align:center;
+    }
+
+    #lubugoText {
+      display:none;
+      background:#fff;
+      padding:28px;
+      border-radius:8px;
+      margin:0 auto 36px;
+      max-width:1000px;
+      line-height:1.65;
+      box-shadow:0 4px 12px rgba(0,0,0,0.1);
+      font-size:1.05rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .process { grid-template-columns: repeat(2, 1fr); }
+    }
     @media (max-width: 768px) {
-      header { padding:60px 16px; }
-      header h1 { font-size:2.6rem; }
-      header em { font-size:1rem; text-align:center; display:block; margin-top:6px; }
-      header p { font-size:1.05rem; }
-      section { padding:40px 16px; }
-      h2 { font-size:1.6rem; }
-      #commission-header { flex-direction:column; gap:14px; font-size:1.6rem; }
-      .cta { width:100%; max-width:320px; }
-      .process { gap:18px; }
-      .process .card { text-align:left; }
-      footer { font-size:0.85rem; }
+      header { padding:64px 16px; }
+      header h1 { font-size:3rem; }
+      header em { font-size:1.1rem; }
+      header p { font-size:1.1rem; line-height:1.55; }
+      section { padding:50px 16px; }
+      h2 { font-size:1.8rem; }
+      #commission-header { flex-direction:column; gap:16px; font-size:1.7rem; }
+      .cta { width:100%; max-width:360px; }
+      .process { gap:22px; }
+      .process .card { text-align:left; padding:20px; font-size:1.03rem; line-height:1.6; }
+      footer { font-size:0.9rem; }
+      #lubugoText { font-size:1rem; padding:20px; margin:0 auto 28px; }
     }
 
     @media (max-width: 480px) {
-      body { font-size:15px; }
-      header h1 { font-size:2.2rem; }
-      section { padding:32px 14px; }
-      .process .card { padding:16px; }
-      form { padding:18px; }
-      footer p { margin:6px 0; }
+      body { font-size:15.5px; }
+      header h1 { font-size:2.5rem; }
+      section { padding:36px 14px; }
+      .process .card { padding:18px; }
+      form#commissionForm { padding:20px; }
+      footer p { margin:8px 0; }
+      #lubugoText { font-size:0.95rem; padding:18px; margin:0 auto 24px; }
     }
-/* Commission form toggle control */
-#commissionForm.is-hidden {
-  display: none;
-}
 
-#commissionForm.is-visible {
-  display: grid;
-}
+    footer {
+      background:#1c1510;
+      color:#fff;
+      padding:32px 20px;
+      text-align:center;
+      font-size:0.95rem;
+      line-height:1.6;
+    }
+
   </style>
 </head>
 <body>
@@ -97,9 +227,9 @@ form p.helper {
   <div style="display:flex; flex-direction:column; align-items:center; gap:14px;">
     <div style="display:flex; align-items:baseline; gap:14px; flex-wrap:wrap; justify-content:center;">
       <h1 style="margin:0;">Logo in Lubugo</h1>
-      <em style="font-size:1.15rem; opacity:0.95;">“Your logo, rendered in authentic Ugandan barkcloth”</em>
+      <em>“Your logo, rendered in authentic Ugandan barkcloth”</em>
     </div>
-    <p style="margin:0; max-width:820px;">This is a fabrication studio translating corporate identity into cultural form.</p>
+    <p>This is a fabrication studio translating corporate identity into cultural form.</p>
   </div>
 </header>
 
@@ -107,9 +237,26 @@ form p.helper {
   <h2>How the Studio Process Works</h2>
   <div class="process">
     <div class="card"><strong>1. We Draft & You Preview</strong><br/>We translate your logo into a paper cut-out draft and share images for approval.</div>
-    <div class="card"><strong>2. You Approve</strong><br/>Once approved, you pay a 50% deposit and we begin fabrication.</div>
+    <div class="card"><strong>2. You Commit</strong><br/>Once approved, you commit to the work and we begin fabrication.</div>
     <div class="card"><strong>3. We Fabricate</strong><br/>Your logo is carefully cut from barkcloth, mounted, and framed by hand.</div>
-    <div class="card"><strong>4. You Approve & We Deliver</strong><br/>You review the finished piece, settle the balance, and we arrange courier delivery.</div>
+    <div class="card"><strong>4. You Approve & We Deliver</strong><br/>You review the finished piece and we arrange courier delivery.</div>
+  </div>
+</section>
+
+<section id="lubugo-info">
+  <div style="text-align:center; margin:40px 0;">
+    <button id="toggleLubugo" class="cta">What is Lubugo</button>
+  </div>
+  <div id="lubugoText">
+    <p><strong>The Lubugo: Recognized by UNESCO as a Masterpiece of the Oral and Intangible Heritage of Humanity</strong></p>
+
+    <p>Lubugo, also known as Ugandan barkcloth, is the oldest known technology of fabric production in the world, handcrafted entirely from the inner bark of the Mutuba tree (Ficus natalensis). Unlike any other civilization, Uganda alone developed the skill of transforming tree bark into soft, wearable cloth — a tradition that has endured for centuries and remains a cultural cornerstone of the Buganda Kingdom, where it is deeply respected and historically worn for royal, ritual, and ceremonial occasions.</p>
+
+    <p>Today, Lubugo is rare and endangered. Only a small number of artisans still preserve this ancient craft, making each piece increasingly valuable. Its scarcity and cultural importance have elevated it to Africa’s prize fabric, sought after globally for its uniqueness. No other fabric in the world carries this combination of heritage, rarity, and natural elegance.</p>
+
+    <p>The production of Lubugo is a meticulous, labor-intensive process. Artisans carefully harvest bark from living Mutuba trees and beat it by hand into a soft, pliable cloth. Every piece is unique in texture and tone, ensuring that each work — whether a logo, artwork, or textile — carries its own story. When clients order from our studio, they directly support these artisans, helping preserve the craft and sustain the communities that keep it alive.</p>
+
+    <p>As a UNESCO-recognized cultural heritage, Lubugo is not merely a fabric — it is a living cultural treasure. Its exclusivity and history make it the kind of material that sparks curiosity and admiration, the kind people ask about. Owning a piece of Lubugo is not only a statement of art and distinction, but a commitment to safeguarding one of the world’s rarest and most revered traditions.</p>
   </div>
 </section>
 
@@ -118,22 +265,12 @@ form p.helper {
     To commission your Barkcloth Logo
     <button id="showForm" class="cta">Tap Here</button>
   </div>
-  <form id="commissionForm" class="is-hidden" action="https://formspree.io/f/mqebgeln" method="POST">
-  <label for="logoLink">Logo file link</label>
-<input
-  type="url"
-  id="logoLink"
-  name="logo_link"
-  placeholder="Paste a secure link to your logo file"
-  required
-/>
-<p class="helper">
-  Please ensure the link is viewable (no access request)
-</p>
 
-<input type="hidden" name="_subject" value="Logo in Lubugo — New Commission Request">
+  <form id="commissionForm">
+    <label for="logoLink">Logo file link</label>
+    <input type="url" id="logoLink" name="logo_link" placeholder="Paste a secure link to your logo file" required />
+    <p class="helper">Please ensure the link is viewable (no access request)</p>
 
-    </div>
     <label>Company / Organisation</label>
     <input type="text" name="company" placeholder="Company / organisation" required />
     <label>Contact Person / Position</label>
@@ -158,7 +295,7 @@ form p.helper {
     </select>
     <label>Additional Notes</label>
     <textarea name="notes" placeholder="Where the piece will be displayed, custom dimensions, framing preferences or cultural/brand story"></textarea>
-    <p><strong>Note:</strong> Shipping is not included in the commission price. Final shipping cost will be added to your invoice based on location and piece size.</p>
+    <p><strong>Note:</strong> Upon approval of the draft, an invoice will be raised. Shipping costs apply from Uganda.</p>
     <button class="cta" type="submit">Request Draft</button>
   </form>
 </section>
@@ -172,7 +309,7 @@ form p.helper {
   <div class="disclaimer-toggle">View Legal & IP Notice</div>
   <div id="disclaimer" class="disclaimer">
     <h2>Legal & Intellectual Property Notice</h2>
-    <p style="color:#2b1d12;">All logo-based barkcloth artworks are produced <strong>exclusively upon request by the rights holder or their authorized representative</strong>. No commissioned work is displayed publicly without explicit client consent. Clients retain all intellectual property rights to their logos. The barkcloth artwork constitutes a bespoke cultural artifact, not a licensed branding product.</p>
+    <p>All logo-based barkcloth artworks are produced <strong>exclusively upon request by the rights holder or their authorized representative</strong>. No commissioned work is displayed publicly without explicit client consent. Clients retain all intellectual property rights to their logos. The barkcloth artwork constitutes a bespoke cultural artifact, not a licensed branding product.</p>
   </div>
   <p>Logo in Lubugo — A barkcloth fabrication studio based in Uganda</p>
   <p>Payments are requested only after draft approval. International courier available.</p>
@@ -182,34 +319,26 @@ form p.helper {
 <script>
   const toggleBtn = document.getElementById('showForm');
   const commissionForm = document.getElementById('commissionForm');
-
   toggleBtn.addEventListener('click', () => {
-    const isHidden = commissionForm.classList.contains('is-hidden');
-
-    if (isHidden) {
-      commissionForm.classList.remove('is-hidden');
-      commissionForm.classList.add('is-visible');
-      toggleBtn.textContent = 'Hide Form';
-    } else {
-      commissionForm.classList.add('is-hidden');
-      commissionForm.classList.remove('is-visible');
-      toggleBtn.textContent = 'Request a Commission';
-    }
+    const isVisible = commissionForm.style.display === 'grid';
+    commissionForm.style.display = isVisible ? 'none' : 'grid';
+    toggleBtn.textContent = isVisible ? 'Tap Here' : 'Hide Form';
   });
 
   const disclaimerToggle = document.querySelector('.disclaimer-toggle');
   const disclaimer = document.getElementById('disclaimer');
-
   disclaimerToggle.addEventListener('click', () => {
     disclaimer.style.display =
       disclaimer.style.display === 'block' ? 'none' : 'block';
+  });
+
+  const toggleLubugoBtn = document.getElementById('toggleLubugo');
+  const lubugoText = document.getElementById('lubugoText');
+  toggleLubugoBtn.addEventListener('click', () => {
+    const isVisible = lubugoText.style.display === 'block';
+    lubugoText.style.display = isVisible ? 'none' : 'block';
   });
 </script>
 
 </body>
 </html>
-
-
-
-
-
