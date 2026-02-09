@@ -15,28 +15,41 @@
     }
 
     header {
-      background:#8B5E3C url('lubugo-barkcloth.jpg') center/cover no-repeat;
+      background:#8B5E3C url('images/lubugo-barkcloth.jpg') center/cover no-repeat;
       color:#fff;
-      padding:80px 20px;
+      padding:60px 20px;
       text-align:center;
     }
-    header h1 {
+
+    .header-flex {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .header-flex h1 {
+      margin: 0;
       font-family:"Palatino Linotype", Palatino, Georgia, serif;
-      font-size:3.6rem;
-      margin-bottom:12px;
-      letter-spacing:1.6px;
+      font-size:3.4rem;
     }
-    header em {
-      font-size:1.25rem;
-      opacity:0.95;
-      display:block;
-      margin-top:6px;
+
+    .header-flex .pi-symbol {
+      font-size: 1.5rem;
+      line-height:1;
     }
-    header p {
+
+    .header-flex em {
       font-size:1.15rem;
-      max-width:800px;
-      margin:24px auto 0;
-      line-height:1.6;
+      opacity:0.95;
+    }
+
+    header p {
+      font-size:1.1rem;
+      max-width:750px;
+      margin:18px auto 0;
+      line-height:1.55;
     }
 
     .cta {
@@ -44,11 +57,11 @@
       outline:none;
       background:#b16b28;
       color:#fff;
-      padding:16px 32px;
+      padding:14px 28px;
       text-decoration:none;
       border-radius:6px;
       font-weight:bold;
-      font-size:1.05rem;
+      font-size:1rem;
       transition:background 0.3s, transform 0.2s;
       cursor:pointer;
       box-shadow:0 2px 6px rgba(0,0,0,0.12);
@@ -59,81 +72,81 @@
     }
 
     section {
-      padding:60px 20px;
-      max-width:1100px;
+      padding:50px 20px;
+      max-width:1050px;
       margin:auto;
     }
+
     h2 {
       font-family:"Palatino Linotype", Palatino, Georgia, serif;
-      font-size:2.2rem;
-      margin-bottom:28px;
+      font-size:2rem;
+      margin-bottom:24px;
       text-align:center;
-      letter-spacing:0.8px;
+      letter-spacing:0.6px;
       color:#9c6b3f;
       font-weight:bold;
     }
 
-    /* Updated process grid: fixed 4 columns, boardroom style */
     .process {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 28px;
+      gap:22px;
       justify-items: stretch;
     }
     .process .card {
       font-family: Georgia, "Times New Roman", serif;
       background:#fff;
-      padding:24px;
+      padding:20px;
       border-radius:8px;
-      box-shadow:0 4px 12px rgba(0,0,0,0.1);
+      box-shadow:0 4px 10px rgba(0,0,0,0.08);
       transition:transform 0.3s, box-shadow 0.3s;
-      line-height:1.6;
-      font-size:1.05rem;
+      line-height:1.55;
+      font-size:1rem;
     }
     .process .card:hover {
-      transform:translateY(-3px);
-      box-shadow:0 6px 18px rgba(0,0,0,0.15);
+      transform:translateY(-2px);
+      box-shadow:0 6px 14px rgba(0,0,0,0.12);
     }
 
     form#commissionForm {
       background:#fff;
-      padding:24px 28px 28px 28px;
+      padding:22px 24px 24px 24px;
       border-radius:10px;
-      box-shadow:0 4px 12px rgba(0,0,0,0.08);
+      box-shadow:0 4px 10px rgba(0,0,0,0.08);
       display:none;
-      grid-gap:16px;
+      grid-gap:12px;
     }
     form#commissionForm label {
-      margin-bottom:8px;
+      margin-bottom:6px;
       font-weight:bold;
       display:block;
-      font-size:1.05rem;
+      font-size:1rem;
     }
     form#commissionForm input,
     form#commissionForm select,
     form#commissionForm textarea {
       width:100%;
-      padding:12px;
+      padding:10px;
       border:1px solid #ccc;
       border-radius:6px;
-      font-size:1rem;
+      font-size:0.95rem;
       font-family: Georgia, "Times New Roman", serif;
-      margin-bottom:20px;
+      margin-bottom:16px;
     }
-    form#commissionForm textarea { min-height:140px; resize:vertical; }
+    form#commissionForm textarea { min-height:120px; resize:vertical; }
 
     #commission-header {
       font-family:"Palatino Linotype", Palatino, Georgia, serif;
-      font-size:2rem;
+      font-size:1.8rem;
       font-weight:bold;
       color:#9c6b3f;
-      margin-bottom:28px;
+      margin-bottom:20px;
       text-align:center;
       display:flex;
       justify-content:center;
       align-items:center;
-      gap:20px;
-      letter-spacing:0.7px;
+      gap:16px;
+      letter-spacing:0.6px;
       flex-wrap:wrap;
     }
 
@@ -141,44 +154,72 @@
       display: none;
       background:#fff;
       border:1px solid #c47a2c;
-      padding:18px;
+      padding:16px;
       border-radius:8px;
-      margin-top:12px;
+      margin-top:10px;
       font-size:0.9rem;
       text-align:left;
       color:#000;
-      line-height:1.6;
+      line-height:1.55;
     }
     .disclaimer-toggle {
       background:#fff;
-      padding:8px 14px;
+      padding:6px 12px;
       border:1px solid #c47a2c;
       border-radius:6px;
       text-align:center;
       cursor:pointer;
       display:inline-block;
       font-weight:bold;
-      margin-top:12px;
+      margin-top:10px;
       color:#000;
     }
 
-    #gallery {
-      padding:60px 20px;
-      max-width:1000px;
-      margin:auto;
-      text-align:center;
+    /* LOCKED GALLERY CSS */
+    #gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 18px;
+      margin-top: 30px;
+    }
+
+    .gallery-item {
+      text-align: center;
+    }
+
+    .gallery-frame {
+      width: 100%;
+      aspect-ratio: 3 / 4;
+      background: #eee;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    }
+
+    .gallery-frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .gallery-item p {
+      margin-top: 8px;
+      font-size: 0.95rem;
+      font-weight: bold;
+      color: #2b1d12;
     }
 
     #lubugoText {
       display:none;
       background:#fff;
-      padding:28px;
+      padding:24px;
       border-radius:8px;
-      margin:0 auto 36px;
-      max-width:1000px;
-      line-height:1.65;
-      box-shadow:0 4px 12px rgba(0,0,0,0.1);
-      font-size:1.05rem;
+      margin:0 auto 30px;
+      max-width:950px;
+      line-height:1.55;
+      box-shadow:0 4px 10px rgba(0,0,0,0.08);
+      font-size:1rem;
     }
 
     /* Responsive */
@@ -186,37 +227,38 @@
       .process { grid-template-columns: repeat(2, 1fr); }
     }
     @media (max-width: 768px) {
-      header { padding:64px 16px; }
-      header h1 { font-size:3rem; }
-      header em { font-size:1.1rem; }
-      header p { font-size:1.1rem; line-height:1.55; }
-      section { padding:50px 16px; }
-      h2 { font-size:1.8rem; }
-      #commission-header { flex-direction:column; gap:16px; font-size:1.7rem; }
-      .cta { width:100%; max-width:360px; }
-      .process { gap:22px; }
-      .process .card { text-align:left; padding:20px; font-size:1.03rem; line-height:1.6; }
+      header { padding:50px 16px; }
+      header h1 { font-size:2.8rem; }
+      header em { font-size:1rem; }
+      header p { font-size:1rem; line-height:1.5; }
+      section { padding:40px 16px; }
+      h2 { font-size:1.6rem; }
+      #commission-header { flex-direction:column; gap:14px; font-size:1.6rem; }
+      .cta { width:100%; max-width:300px; }
+      .process { gap:18px; }
+      .process .card { text-align:left; padding:16px; font-size:0.98rem; line-height:1.5; }
       footer { font-size:0.9rem; }
-      #lubugoText { font-size:1rem; padding:20px; margin:0 auto 28px; }
+      #lubugoText { font-size:0.95rem; padding:18px; margin:0 auto 24px; }
+      .header-flex .pi-symbol { font-size:1.2rem; }
     }
 
     @media (max-width: 480px) {
-      body { font-size:15.5px; }
-      header h1 { font-size:2.5rem; }
-      section { padding:36px 14px; }
-      .process .card { padding:18px; }
-      form#commissionForm { padding:20px; }
-      footer p { margin:8px 0; }
-      #lubugoText { font-size:0.95rem; padding:18px; margin:0 auto 24px; }
+      body { font-size:15px; }
+      header h1 { font-size:2.3rem; }
+      section { padding:30px 14px; }
+      .process .card { padding:14px; }
+      form#commissionForm { padding:16px; }
+      footer p { margin:6px 0; }
+      #lubugoText { font-size:0.9rem; padding:16px; margin:0 auto 20px; }
     }
 
     footer {
       background:#1c1510;
       color:#fff;
-      padding:32px 20px;
+      padding:28px 20px;
       text-align:center;
       font-size:0.95rem;
-      line-height:1.6;
+      line-height:1.55;
     }
 
   </style>
@@ -224,9 +266,10 @@
 <body>
 
 <header>
-  <div style="display:flex; flex-direction:column; align-items:center; gap:14px;">
-    <div style="display:flex; align-items:baseline; gap:14px; flex-wrap:wrap; justify-content:center;">
-      <h1 style="margin:0;">Logo in Lubugo</h1>
+  <div style="display:flex; flex-direction:column; align-items:center; gap:12px;">
+    <div class="header-flex">
+      <h1>Logo in Lubugo</h1>
+      <span class="pi-symbol">π</span>
       <em>“Your logo, rendered in authentic Ugandan barkcloth”</em>
     </div>
     <p>This is a fabrication studio translating corporate identity into cultural form.</p>
@@ -244,7 +287,7 @@
 </section>
 
 <section id="lubugo-info">
-  <div style="text-align:center; margin:40px 0;">
+  <div style="text-align:center; margin:36px 0;">
     <button id="toggleLubugo" class="cta">What is Lubugo</button>
   </div>
   <div id="lubugoText">
@@ -269,7 +312,9 @@
   <form id="commissionForm">
     <label for="logoLink">Logo file link</label>
     <input type="url" id="logoLink" name="logo_link" placeholder="Paste a secure link to your logo file" required />
-    <p class="helper">Please ensure the link is viewable (no access request)</p>
+    <p class="helper" style="margin-top:2px; margin-bottom:16px; color:#999; font-style:normal; font-size:0.95rem;">
+      Please ensure the link is viewable (no access request)
+    </p>
 
     <label>Company / Organisation</label>
     <input type="text" name="company" placeholder="Company / organisation" required />
@@ -300,9 +345,45 @@
   </form>
 </section>
 
+<!-- LOCKED GALLERY -->
 <section id="gallery">
   <h2>Studio Works</h2>
-  <p>We will showcase completed commissions here once they are finished, with client permission.</p>
+  <div id="gallery-grid">
+    <div class="gallery-item">
+      <div class="gallery-frame">
+        <img src="images/logo.png" alt="Logo">
+      </div>
+      <p>Logo</p>
+    </div>
+
+    <div class="gallery-item">
+      <div class="gallery-frame">
+        <img src="images/paper-cutout-draft.jpg" alt="Paper cutout draft">
+      </div>
+      <p>Paper cutout draft</p>
+    </div>
+
+    <div class="gallery-item">
+      <div class="gallery-frame">
+        <img src="images/fabrication.jpg" alt="Fabrication">
+      </div>
+      <p>Fabrication</p>
+    </div>
+
+    <div class="gallery-item">
+      <div class="gallery-frame">
+        <img src="images/coming-soon.jpg" alt="Barkcloth cutout coming soon">
+      </div>
+      <p>Barkcloth cutout</p>
+    </div>
+
+    <div class="gallery-item">
+      <div class="gallery-frame">
+        <img src="images/coming-soon.jpg" alt="Final framed logo coming soon">
+      </div>
+      <p>Final framed logo</p>
+    </div>
+  </div>
 </section>
 
 <footer>
@@ -339,6 +420,3 @@
     lubugoText.style.display = isVisible ? 'none' : 'block';
   });
 </script>
-
-</body>
-</html>
