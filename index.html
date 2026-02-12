@@ -4,6 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Logo in Lubugo | Your logo, rendered in authentic Ugandan barkcloth</title>
+
+  <!-- Preload hero image to avoid background flash -->
+  <link rel="preload" href="images/lubugo-barkcloth.jpg" as="image">
+
   <style>
     body {
       margin:0;
@@ -33,11 +37,6 @@
       margin: 0;
       font-family:"Palatino Linotype", Palatino, Georgia, serif;
       font-size:3.4rem;
-    }
-
-    .header-flex .pi-symbol {
-      font-size: 1.5rem;
-      line-height:1;
     }
 
     .header-flex em {
@@ -222,6 +221,16 @@
       font-size:1rem;
     }
 
+    /* Hero note, pricing, logistics below form */
+    .commission-bullets {
+      font-family: "Palatino Linotype", Palatino, Georgia, serif;
+      font-size:0.85rem;
+      color:#555;
+      margin-top:8px;
+      line-height:1.45;
+    }
+    .commission-bullets b { font-weight:bold; }
+
     /* Responsive */
     @media (max-width: 1024px) {
       .process { grid-template-columns: repeat(2, 1fr); }
@@ -239,7 +248,6 @@
       .process .card { text-align:left; padding:16px; font-size:0.98rem; line-height:1.5; }
       footer { font-size:0.9rem; }
       #lubugoText { font-size:0.95rem; padding:18px; margin:0 auto 24px; }
-      .header-flex .pi-symbol { font-size:1.2rem; }
     }
 
     @media (max-width: 480px) {
@@ -269,7 +277,6 @@
   <div style="display:flex; flex-direction:column; align-items:center; gap:12px;">
     <div class="header-flex">
       <h1>Logo in Lubugo</h1>
-      <span class="pi-symbol">π</span>
       <em>“Your logo, rendered in authentic Ugandan barkcloth”</em>
     </div>
     <p>This is a fabrication studio translating corporate identity into cultural form.</p>
@@ -292,13 +299,9 @@
   </div>
   <div id="lubugoText">
     <p><strong>The Lubugo: Recognized by UNESCO as a Masterpiece of the Oral and Intangible Heritage of Humanity</strong></p>
-
     <p>Lubugo, also known as Ugandan barkcloth, is the oldest known technology of fabric production in the world, handcrafted entirely from the inner bark of the Mutuba tree (Ficus natalensis). Unlike any other civilization, Uganda alone developed the skill of transforming tree bark into soft, wearable cloth — a tradition that has endured for centuries and remains a cultural cornerstone of the Buganda Kingdom, where it is deeply respected and historically worn for royal, ritual, and ceremonial occasions.</p>
-
     <p>Today, Lubugo is rare and endangered. Only a small number of artisans still preserve this ancient craft, making each piece increasingly valuable. Its scarcity and cultural importance have elevated it to Africa’s prize fabric, sought after globally for its uniqueness. No other fabric in the world carries this combination of heritage, rarity, and natural elegance.</p>
-
     <p>The production of Lubugo is a meticulous, labor-intensive process. Artisans carefully harvest bark from living Mutuba trees and beat it by hand into a soft, pliable cloth. Every piece is unique in texture and tone, ensuring that each work — whether a logo, artwork, or textile — carries its own story. When clients order from our studio, they directly support these artisans, helping preserve the craft and sustain the communities that keep it alive.</p>
-
     <p>As a UNESCO-recognized cultural heritage, Lubugo is not merely a fabric — it is a living cultural treasure. Its exclusivity and history make it the kind of material that sparks curiosity and admiration, the kind people ask about. Owning a piece of Lubugo is not only a statement of art and distinction, but a commitment to safeguarding one of the world’s rarest and most revered traditions.</p>
   </div>
 </section>
@@ -340,8 +343,14 @@
     </select>
     <label>Additional Notes</label>
     <textarea name="notes" placeholder="Where the piece will be displayed, custom dimensions, framing preferences or cultural/brand story"></textarea>
-    <p><strong>Note:</strong> Upon approval of the draft, an invoice will be raised. Shipping costs apply from Uganda.</p>
+
     <button class="cta" type="submit">Request Draft</button>
+
+    <div class="commission-bullets">
+      <p><b>Note:</b> Upon approval of the draft, an invoice will be raised. Shipping costs apply from Uganda.</p>
+      <p><b>Pricing:</b> Typical commissions range from USD 600–4,000 depending on scale and complexity.</p>
+      <p><b>Logistics:</b> We handle international packing and export coordination for all foreign commissions undertaken.</p>
+    </div>
   </form>
 </section>
 
@@ -355,33 +364,29 @@
       </div>
       <p>Logo</p>
     </div>
-
     <div class="gallery-item">
       <div class="gallery-frame">
         <img src="images/paper-cutout-draft.jpg" alt="Paper cutout draft">
       </div>
-      <p>Paper cutout draft</p>
+      <p>Paper Draft</p>
     </div>
-
     <div class="gallery-item">
       <div class="gallery-frame">
         <img src="images/fabrication.jpg" alt="Fabrication">
       </div>
       <p>Fabrication</p>
     </div>
-
     <div class="gallery-item">
       <div class="gallery-frame">
         <img src="images/coming-soon.jpg" alt="Barkcloth cutout coming soon">
       </div>
-      <p>Barkcloth cutout</p>
+      <p>Cutout Art</p>
     </div>
-
     <div class="gallery-item">
       <div class="gallery-frame">
         <img src="images/coming-soon.jpg" alt="Final framed logo coming soon">
       </div>
-      <p>Final framed logo</p>
+      <p>Framed Logo</p>
     </div>
   </div>
 </section>
@@ -420,3 +425,6 @@
     lubugoText.style.display = isVisible ? 'none' : 'block';
   });
 </script>
+
+</body>
+</html>
