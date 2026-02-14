@@ -6,7 +6,7 @@
   <title>Logo in Lubugo | Your logo, rendered in authentic Ugandan barkcloth</title>
 
   <!-- Preload hero image to avoid background flash -->
-  <link rel="preload" href="images/lubugo-barkcloth.jpg" as="image">
+  <link rel="preload" href="images/lubugo-barkcloth.jpg" as="image" fetchpriority="high">
 
   <style>
     body {
@@ -19,11 +19,23 @@
     }
 
     header {
-      background:#8B5E3C url('images/lubugo-barkcloth.jpg') center/cover no-repeat;
-      color:#fff;
-      padding:60px 20px;
-      text-align:center;
-    }
+  position: relative;
+  background-color:#8B5E3C;
+  background-image:url('images/lubugo-barkcloth.jpg');
+  background-position:center;
+  background-size:cover;
+  background-repeat:no-repeat;
+  color:#fff;
+  padding:60px 20px;
+  text-align:center;
+  opacity:0;
+  transition:opacity 0.8s ease-in-out;
+}
+
+header.loaded {
+  opacity:1;
+}
+
 
     .header-flex {
       display: flex;
@@ -51,24 +63,29 @@
       line-height:1.55;
     }
 
-    .cta {
-      border:none;
-      outline:none;
-      background:#b16b28;
-      color:#fff;
-      padding:14px 28px;
-      text-decoration:none;
-      border-radius:6px;
-      font-weight:bold;
-      font-size:1rem;
-      transition:background 0.3s, transform 0.2s;
-      cursor:pointer;
-      box-shadow:0 2px 6px rgba(0,0,0,0.12);
-    }
-    .cta:hover {
-      background:#9c5a21;
-      transform:translateY(-2px);
-    }
+   .cta {
+  border:none;
+  outline:none;
+  background:#B06F3F;   /* Dark barkcloth orange */
+  color:#FFFFFF;        /* Pure white */
+  padding:14px 28px;
+  text-decoration:none;
+  border-radius:6px;
+  font-weight:bold;
+  font-size:1rem;
+  transition:background 0.3s, transform 0.2s;
+  cursor:pointer;
+  box-shadow:0 3px 8px rgba(0,0,0,0.18);
+}
+
+
+
+.cta:hover {
+  background:#965A30;   /* Deeper burnt shade */
+  transform:translateY(-2px);
+}
+ 
+
 
     section {
       padding:50px 20px;
@@ -174,41 +191,7 @@
       color:#000;
     }
 
-    /* LOCKED GALLERY CSS */
-    #gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 18px;
-      margin-top: 30px;
-    }
-
-    .gallery-item {
-      text-align: center;
-    }
-
-    .gallery-frame {
-      width: 100%;
-      aspect-ratio: 3 / 4;
-      background: #eee;
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
-    }
-
-    .gallery-frame img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-
-    .gallery-item p {
-      margin-top: 8px;
-      font-size: 0.95rem;
-      font-weight: bold;
-      color: #2b1d12;
-    }
-
+   
     #lubugoText {
       display:none;
       background:#fff;
@@ -354,7 +337,7 @@
   </form>
 </section>
 
-<!-- LOCKED GALLERY -->
+<!-- ======= LOCKED GALLERY ======= -->
 <section id="gallery">
   <h2>Studio Works</h2>
   <div id="gallery-grid">
@@ -364,32 +347,92 @@
       </div>
       <p>Logo</p>
     </div>
+
     <div class="gallery-item">
       <div class="gallery-frame">
-        <img src="images/paper-cutout-draft.jpg" alt="Paper cutout draft">
+        <img src="images/paper-cutout-draft.jpg" alt="Draft stage">
       </div>
-      <p>Paper Draft</p>
+      <p>Draft</p>
     </div>
+
     <div class="gallery-item">
       <div class="gallery-frame">
-        <img src="images/fabrication.jpg" alt="Fabrication">
+        <img src="images/fabrication.jpg" alt="Create stage">
       </div>
-      <p>Fabrication</p>
+      <p>Create</p>
     </div>
+
     <div class="gallery-item">
       <div class="gallery-frame">
-        <img src="images/coming-soon.jpg" alt="Barkcloth cutout coming soon">
+        <img src="images/coming-soon.jpg" alt="Craft stage">
       </div>
-      <p>Cutout Art</p>
+      <p>Craft</p>
     </div>
+
     <div class="gallery-item">
       <div class="gallery-frame">
-        <img src="images/coming-soon.jpg" alt="Final framed logo coming soon">
+        <img src="images/coming-soon.jpg" alt="Present stage">
       </div>
-      <p>Framed Logo</p>
+      <p>Present</p>
     </div>
   </div>
 </section>
+
+<style>
+/* ======= MERGED GALLERY + FIXED SPACING CSS ======= */
+#gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr)); /* ensures equal spacing */
+  column-gap: 18px;   /* horizontal spacing between images */
+  row-gap: 18px;      /* vertical spacing between rows */
+  margin-top: 30px;
+}
+
+.gallery-item {
+  text-align: center;
+}
+
+.gallery-frame {
+  width: 100%;
+  aspect-ratio: 3 / 4;       /* maintains portrait ratio */
+  background: #eee;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  display: flex;
+  justify-content: center;
+  align-items: center;       /* centers image inside frame */
+}
+
+.gallery-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;         /* fills frame completely */
+  display: block;
+}
+
+.gallery-item p {
+  min-height: 1.4em;         /* ensures captions have equal height */
+  text-align: center;
+  margin-top: 8px;
+  font-weight: bold;
+  color: #2b1d12;
+}
+
+/* ======= Responsive ======= */
+@media (max-width: 1024px) {
+  #gallery-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (max-width: 768px) {
+  #gallery-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 480px) {
+  #gallery-grid { grid-template-columns: 1fr; }
+}
+</style>
+
+
+
 
 <footer>
   <div class="disclaimer-toggle">View Legal & IP Notice</div>
@@ -424,6 +467,10 @@
     const isVisible = lubugoText.style.display === 'block';
     lubugoText.style.display = isVisible ? 'none' : 'block';
   });
+window.addEventListener("load", function() {
+  document.querySelector("header").classList.add("loaded");
+});
+
 </script>
 
 </body>
